@@ -1,0 +1,4 @@
+<?php
+function form_email_check_form_alter(&$form, &$form_state, $form_id) {
+	
+}
