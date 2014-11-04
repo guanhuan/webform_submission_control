@@ -1,4 +1,7 @@
 <?php
-function form_email_check_form_alter(&$form, &$form_state, $form_id) {
-	
+function webform_submission_control_form_alter(&$form, &$form_state, $form_id) {
+  if (strpos($form_id, 'webform') !== false) {
+    if ($form_state['webform']['page_num'] == $form_state['webform']['page_count']) {
+    }
+  }
 }
