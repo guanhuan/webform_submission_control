@@ -2,6 +2,13 @@
 function webform_submission_control_form_alter(&$form, &$form_state, $form_id) {
   if (strpos($form_id, 'webform') !== false) {
     if ($form_state['webform']['page_num'] == $form_state['webform']['page_count']) {
+      $form['#attached']['js'] = array(drupal_get_path('module', 'webform_submission_control') . '/webform_submission_control.js', 'file');
     }
   }
 }
+
+/* consider use this
+function webform_submission_control_after_build(&$form, &$form_state){
+  
+}
+*/
